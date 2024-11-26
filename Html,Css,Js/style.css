@@ -1,0 +1,191 @@
+:root {
+    --color-primary: hsl(225, 50%, 90%);
+    --color-secondary: hsl(225, 50%, 10%);
+    --color-tertiary: hsl(285, 80%, 20%);
+    --color-accent: hsl(225, 80%, 40%);
+}
+
+.dark {
+    --color-primary: hsl(225, 50%, 10%);
+    --color-secondary: hsl(225, 50%, 90%);
+    --color-tertiary: hsl(285, 80%, 80%);
+    --color-accent: hsl(165, 80%, 80%);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.navlink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-secondary);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+li, a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-weight: 500;
+    list-style: none;
+    transition: color 0.5s ease;
+    display: inline-block;
+    margin: 8px;
+}
+
+a:hover {
+    color: var(--color-tertiary);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-tertiary);
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.cta {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.card {
+    margin-top: 40px;
+    padding: 10px;
+    padding-top: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    height: 400px;
+    border-radius: 10px;
+}
+img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.sizeselectors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.selector{
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 2px;
+    font-weight: 500;
+}
+.selector:hover{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+.quantitybuttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
+.increasebutton, .decreasebutton {
+    margin: 12px;
+    margin-bottom: 6px;
+    height: 24px;
+    width: 24px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: 2px;
+}
+.increasebutton:hover{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+.decreasebutton:hover{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+.cta2{
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.cta2:hover{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+footer{
+    position: fixed;
+    top: 90%;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    outline: auto;
+}
+#icon{
+    color: var(--color-primary);
+    transition:color 0.5s ease, transform 0.5s ease;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 25%;
+}
+#icon:hover{
+    color: var(--color-accent);
+    transform: translateY(-10px);
+}
